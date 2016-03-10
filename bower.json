@@ -1,0 +1,28 @@
+{
+  "name": "5terre",
+  "description": "Multi-app demo",
+  "main": "",
+  "authors": [
+    "vlevchine <valevchine@yahoo.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/vlevchine/5terre",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "toastr": "^2.1.2",
+    "ramda": "^0.19.1",
+    "moment": "^2.12.0",
+    "axios": "^0.9.1",
+    "font-awesome": "^4.5.0",
+    "rxjs": "^4.1.0"
+  }
+}
