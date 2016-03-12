@@ -7,9 +7,12 @@ var express = require('express'),
 
 var router = require('./router',
     config = require('./config/all')),
+    Connector = require('./lib/appConnector'),
+    identityServer = require('./identityServer'),
     app = express();
 
-app.port = config.port;;
+app.port = config.port;
+identityServer.manageRegistration(new Connector(config.clientId, config.redis));
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -54,6 +57,5 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
-
 
 module.exports = app;

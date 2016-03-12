@@ -36,9 +36,11 @@ var crypto = require('crypto'),
             crypto.pbkdf2Sync(password, salt, conf.workFactor, conf.keyLength).toString('base64');
     },
 
-    hashPasswordSha = function(salt, password) {
-        return !salt ? password :
-            crypto.createHmac('sha1', salt).update(password).digest('hex');
+    createDigest = function(message, salt, alg) {
+        var alg = alg || 'sha1',
+            salt = salt || crypto.randomBytes(10).toString('base64');
+
+        return crypto.createHmac(alg, salt).update(message).digest('hex');
     },
 
     hashPasswordBcrypt = function(user, seed) {
@@ -119,7 +121,7 @@ module.exports = {
     base64Decode: base64Decode,
     createSalt: createSalt,
     hashPasswordStrong: hashPassword,
-    hashPasswordSha: hashPasswordSha,
+    createDigest: createDigest,
     hashPasswordBcrypt: hashPasswordBcrypt,
     encodeToken: encodeToken,
     decodeToken: decodeToken,

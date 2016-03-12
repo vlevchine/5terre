@@ -1,0 +1,103 @@
+@mainTextColor: #494e55;
+@headerColor: #494e55;
+@backgroundColor: #eeeee6;
+@titleColor: #5A5799;
+@baseTitleColor: #9b7188;
+
+/***** 1. Content *****/
+body {
+  padding: 10px 10px 20px 10px;
+  margin: 0px;
+  height: 100%;
+  word-wrap: break-word;
+  line-height: 30px;
+  color: @mainTextColor;
+  background-color: @backgroundColor;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+}
+
+body, legend {
+  color: @headerColor;
+}
+
+a {
+  color: @titleColor;/*#00B7FF*/
+  text-decoration: underline;
+}
+
+a:hover, a:focus {
+  color: inherit;
+  text-decoration: underline;
+}
+
+blockquote {
+  border-left: 5px solid #abb2ba;
+}
+
+blockquote small {
+  line-height: 30px;
+}
+
+body, legend {
+  /*color:#494e55;*/
+}
+
+code {
+  color: inherit;
+  padding: 6px 6px;
+}
+
+h1 {
+  color: @titleColor;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 34px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h1 a, h1 a:hover, h1 a:focus {
+  text-decoration:none;
+}
+h2, h3, h4, h5, h6 {
+  color: @titleColor;
+}
+
+h4 {
+  margin-top:20px;
+}
+
+hr {
+  margin-top:12px;
+  border-top:none;
+  /*border-bottom:1px solid #b2b8c1;*/
+}
+
+li {
+  line-height: 30px;
+}
+
+ol, ul {
+  margin-bottom:30px;
+}
+
+p {
+  margin-bottom:30px;
+}
+
+.visible {
+  visibility: visible;
+}
+.invisible {
+  visibility: hidden;
+}
+
+p, li {
+  font-family: 'PT Serif', serif;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+@import 'layout.less';

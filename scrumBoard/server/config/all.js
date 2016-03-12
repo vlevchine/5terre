@@ -7,12 +7,12 @@ var common = require('../config_common/all'),
 
 var overall = _.extend({}, common, env, {
         root: './bin',
-        clientId: 'workbench',
-        serverName: 'identityServer',
-        title: "Workbench",
+        port: 3081,
+        clientId: 'scrumBoard',
+        serverName: 'scrumBoard',
+        title: "SCRUM Board",
         version: '1.0.0',
-        anonimousAccess: true,
-        clients: ['scrumBoard', 'dashboard'],
+        anonimousAccess: false,
         claims: {
             wells: 1,
             well: 2,
@@ -26,8 +26,6 @@ var overall = _.extend({}, common, env, {
             keyLength: 32,
             randomSize: 256
         },
-        authEndpoint: '',
-        tokenEndpoint: '',
         passwordSecret: 'secret',
         apiSecret: 'apisecret',
         loginURL: '/login',
@@ -39,6 +37,5 @@ var overall = _.extend({}, common, env, {
 
 overall.port = env.port || '3000';
 overall.host = 'http://' + overall.baseURL + ':' + overall.port;
-
 
 module.exports = overall;

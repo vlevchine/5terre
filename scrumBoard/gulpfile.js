@@ -59,7 +59,7 @@ var config = {
     images: ['assets/images/*.*', '../assets/images/*.*'],
     less: ['assets/less/*.less'],
     server: [
-        'server/**/*.js', 'server/**/*.ejs', '../common/**/*.js', 'Procfile', 'package.json']
+        'server/**/*.js', 'server/**/*.ejs', '../common_server/**/*.js', 'Procfile', 'package.json']
 };
 
 gulp.task('clean', function(done) {
